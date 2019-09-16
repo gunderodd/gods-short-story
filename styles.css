@@ -29,7 +29,8 @@ body {
 }
 
 .page-wrap {
-  width: 70%;
+  /* width: 70%; */
+  width: 840px;
   margin: auto;
   /* padding: 10vh; */
   position: relative;
