@@ -39,7 +39,8 @@ body {
 
 .panel {
   /* border: 1px dotted green; */
-  width: auto;
+  /* width: auto; */
+  width: 840px;
   height: 100vh;
   /* width: 900;
   height: 720; */
@@ -204,9 +205,91 @@ a:hover {
                                                         /* panel 5 */
 
 #panel5 {
-  padding: 2vw;
+  padding: 1vw;
+  background:
+    radial-gradient(white 3px, transparent 4px),
+    radial-gradient(white 3px, transparent 4px),
+    linear-gradient(lightpink 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #590332 75px, #590332 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #590332 76px, #590332 77px, transparent 78px, transparent 109px),
+    lightpink;
+  background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+
 }
 
 #txt-thenon {
   font-size: 3vw;
+  position: relative;
+  bottom: 41vh;
+}
+
+                                                                    /* panel 6 */
+
+#panel6 {
+  background:
+linear-gradient(135deg, lightpink 25%, transparent 25%) -50px 0,
+linear-gradient(225deg, lightpink 25%, transparent 25%) -50px 0,
+linear-gradient(315deg, lightpink 25%, transparent 25%),
+linear-gradient(45deg, lightpink 25%, transparent 25%);
+background-size: 2em 2em;
+background-color: #f8bdc6;
+}
+
+#txt-suddenly {
+  position: relative;
+  text-align: center;
+  font-size: 5vw;
+  top: 10vh;
+  margin: 2vh;
+  color: black;
+}
+
+#grid6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  padding: 5vw;
+}
+
+.panel6img {
+  border: 2px solid black;
+  position: relative;
+  top: 10vh;
+  height: 30vh;
+  transform: rotate(-2deg);
+  filter: drop-shadow(50px 20px 30px black);
+
+  animation-name: panel6img;
+  animation-duration: .1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#special6 {
+  animation-name: panel6special;
+  animation-duration: .01s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes panel6img {
+  from {transform: rotate(-2deg);}
+  to {transform: rotate(1deg);}
+}
+
+@keyframes panel6special {
+  from {height: 30vh; transform: scale(1);}
+  to {height: 30.5vh; transform: scale(1.1);}
+
+}
+
+/* panel 7 */
+
+#panel7 {
+
+}
+
+#txt-godsat {
+
 }
