@@ -29,8 +29,8 @@ body {
 }
 
 .page-wrap {
-  /* width: 70%; */
-  width: 840px;
+  width: 70%;
+  /* width: 840px; */
   margin: auto;
   /* padding: 10vh; */
   position: relative;
@@ -301,9 +301,30 @@ background-color: #f8bdc6;
 /* panel 7 */
 
 #panel7 {
-
-}
+  padding: 2vw;
+  display: inline-block;
+  text-align: center;
+  margin: auto;
+  }
 
 #txt-godsat {
+  font-size: 2.5vw;
+}
 
+#god-explode {
+  background-image: url("media/god_quake4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40vw;
+  height: 70vh;
+  border: 2px solid black;
+  margin: auto;
+  padding: 10vw;
+}
+
+#god-explode:hover {
+  border: none;
+  width: 50vw;
+  height: 80vh;
+  background-image:url("media/god_quake5.png");
 }
