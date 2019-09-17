@@ -14,6 +14,9 @@
 .color_out_of_space_poster-3-hex { color: #26011C; }
 .color_out_of_space_poster-4-hex { color: #26402F; }
 .color_out_of_space_poster-5-hex { color: #F2F2F2; }
+
+/* try something using css variables...root: --purple(show code, etc) root basically means html element*/
+
 /* also lightpink */
 
 
@@ -24,35 +27,37 @@ html {
 
 body {
   background-color: black;
-  /* width: 1280px;
-  height: 720px; */
+}
+
+:root {
+  --black: #0D0005;
+  --darkpink: #590332;
+  --lightpink: lightpink;
+  --lighterpink: #f8bdc6;
+  --purple: #26011C;
+  --green: #26402F;
+
+  --img: position: absolute;
+}
+
+img {
+  position: absolute;
 }
 
 .page-wrap {
-  width: 70%;
-  /* width: 840px; */
+  width: 900px;
   margin: auto;
-  /* padding: 10vh; */
-  position: relative;
-  /* border: 1px solid red; */
   background-color: lightpink;
 }
 
 .panel {
-  /* border: 1px dotted green; */
+  position: relative;
   width: auto;
-  height: 100vh;
-  /* width: 900;
-  height: 720; */
-  /* display: flex;
-  justify-content: center; */
+  height: 620px;
 }
 
 
-.txt {
-  font-size: 5vw;
-
-}
+                                                        /* navigation stuff */
 
 nav {
   position: fixed;
@@ -64,33 +69,32 @@ nav {
   width: 10vw;
   height: auto;
   background-color: white;
-  border-bottom: 2px solid black;
 }
 
-ul {
-  list-style-type: none;
-}
+      ul {
+        list-style-type: none;
+      }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 3vh;
-}
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 3vh;
+      }
 
-a:visited {
-  color: black;
-}
+      a:visited {
+        color: black;
+      }
 
-a:hover {
-  font-size: 4vh;
-}
+      a:hover {
+        font-size: 4vh;
+      }
 
                         /* specific panels, including their ids with words, illustrations, and decorations */
 
                                                             /* panel 1 */
 
 #panel1 {
-  padding: 5vh;
+  padding: 30px;
 
   animation-name: panel1;
   animation-duration: 1s;
@@ -99,17 +103,25 @@ a:hover {
 }
 
 #txt-inthe {
+  font-size: 60px;
+  position: absolute;
+  bottom: 125px;
+
   transform: skewY(5deg);
   color: #F2F2F2;
-
 }
 
+#splash1 {
+  width: 700px;
+  bottom: 0;
+  opacity: .3;
+}
 
 #god1 {
-  width: 65vw;
-  position: relative;
-  bottom: 125vh;
-  left: 12vw;
+  width: 800px;
+  bottom: -20px;
+  left: 240px;
+
   filter: drop-shadow(10px 1px 6px #292525);
 
   animation-name: god1;
@@ -118,24 +130,18 @@ a:hover {
   animation-direction: alternate;
 }
 
-#splash1 {
-  position: relative;
-  width: 70vw;
-  height: 50vh;
-  opacity: .3;
-  bottom: 60vh;
+@keyframes panel1 {
+  from {padding: 30px;}
+  to {padding: 31px;}
 }
 
 
 @keyframes god1 {
-  from {width: 65vw;}
-  to {width: 65.1vw;}
+  from {width: 800px;}
+  to {width: 801px;}
 }
 
-@keyframes panel1 {
-  from {padding: 5vh;}
-  to {padding: 5.1vh;}
-}
+
 
 
                                                             /* panel 2 */
@@ -143,45 +149,57 @@ a:hover {
 #panel2 {
   background-image: url("media/background_panel2.png");
   background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 10px;
 }
 
 #txt-hemade {
-  font-size: 2vw;
-  line-height: 10vh;
+  font-size: 30px;
+  line-height: 40px;
   color: white;
 
 }
 
-#blackstrip {
-
-}
-
 #txt-arc {
-  position: relative;
-  left: 30vw;
-  bottom: 40vh;
+  position: absolute;
+  right: -400px;
+  top: 170px;
 }
 
 #txt-hecalled {
   position: relative;
-  font-size: 1vw;
-  /* top: 30vh; */
-  bottom: 30vh;
-
+  font-size: 12px;
 }
 
+#earth-spin {
+  position: absolute;
+  left: 600px;
+  top: 100px;
+
+  width: 300px;
+  filter: drop-shadow(10px 1px 6px #292525);"
+}
 
                                                                 /* panel 3 */
 
 #panel3 {
   background-color: white;
-  padding: 2vw;
+  padding: 50px;
 }
 
 #txt-godmade {
-  font-size: 3vw;
-  color: #26402F;
+  font-size: 40px;
+  color: var(--green);
   text-align: center;
+}
+
+#godhead3 {
+   position: absolute;
+   width: 400px;
+   bottom: 5px;
+   left: 520px;
+
 }
 
 
@@ -189,23 +207,26 @@ a:hover {
 
 #panel4 {
   background-color: black;
-  /* background-image: url("media/man_angel_god.png");
-  background-size: contain;
-  background-repeat: no-repeat; */
-  padding: 5vw;
+  padding: 60px;
 }
 
 #txt-hedecided {
   color: white;
-  font-size: 2vw;
+  font-size: 26px;
   font-style: italic;
-  padding: 2vw;
+  padding: 30px;
+}
+
+#man-angel-god {
+   position: absolute;
+   width: 450px;
+   left: 200px;
 }
 
                                                         /* panel 5 */
 
 #panel5 {
-  padding: 1vw;
+  padding: 40px;
   background:
     radial-gradient(white 3px, transparent 4px),
     radial-gradient(white 3px, transparent 4px),
@@ -218,46 +239,63 @@ a:hover {
 }
 
 #txt-thenon {
-  font-size: 3vw;
-  position: relative;
-  bottom: 41vh;
-  left: 3vw;
+  font-size: 30px;
+  position: absolute;
+}
+
+#shading-5a {
+  width: 450px;
+  opacity: .8;
+  top: 50px;
+  left: 20px;
+}
+
+#shading-5b {
+  width: 400px;
+  height: 150px;
+  opacity: .7;
+  top: 100px;
+  left: 20px;
+}
+
+#god-tv {
+   width: 600px;
+   bottom: 20px;
+   filter: drop-shadow(10px 70px 60px black);
 }
 
                                                                     /* panel 6 */
 
 #panel6 {
+  padding: 40px;
+
   background:
-linear-gradient(135deg, lightpink 25%, transparent 25%) -50px 0,
-linear-gradient(225deg, lightpink 25%, transparent 25%) -50px 0,
-linear-gradient(315deg, lightpink 25%, transparent 25%),
-linear-gradient(45deg, lightpink 25%, transparent 25%);
-background-size: 2em 2em;
-background-color: #f8bdc6;
+    linear-gradient(135deg, lightpink 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, lightpink 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, lightpink 25%, transparent 25%),
+    linear-gradient(45deg, lightpink 25%, transparent 25%);
+    background-size: 2em 2em;
+    background-color: var(--lighterpink);
 }
 
 #txt-suddenly {
-  position: relative;
   text-align: center;
-  font-size: 5vw;
-  top: 10vh;
-  margin: 2vh;
-  color: black;
+  font-size: 60px;
 }
 
 #grid6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2fr;
-  padding: 5vw;
+  padding: 20px;
 }
 
 .panel6img {
   border: 2px solid black;
   position: relative;
-  top: 10vh;
-  height: 30vh;
-  /* transform: rotate(-2deg); */
+  top: 40px;
+  left: 20px;
+  width: 200px;
   filter: drop-shadow(50px 20px 30px black);
 
 }
@@ -293,40 +331,46 @@ background-color: #f8bdc6;
 }
 
 @keyframes panel6special {
-  from {height: 30vh; transform: scale(1);}
-  to {height: 30.5vh; transform: scale(1.1);}
+  from {height: 200px; transform: scale(1);}
+  to {height: 205px; transform: scale(1.1);}
 
 }
 
-/* panel 7 */
+                                                                /* panel 7 */
 
 #panel7 {
-  position: relative;
-  padding: 2vw;
+  padding: 20px;
   text-align: center;
   margin: auto;
-  }
+  /* background-color: var(--purple); */
+}
 
 #txt-godsat {
-  font-size: 2.5vw;
+  font-size: 30px;
 }
 
 #god-explode {
   position: absolute;
-  top: 20px;
+  top: 150px;
+  left: 270px;
+
   background-image: url("media/god_quake4.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 40vw;
-  height: 70vh;
-  border: 2px solid black;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  border: 4px solid black;
   margin: auto;
-  padding: 10vw;
+  padding: 40px;
+  color: white;
 }
 
 #god-explode:hover {
+  left: 220px;
+  top: 100px;
+
   border: none;
-  width: 50vw;
-  height: 80vh;
+  width: 500px;
+  height: 500px;
   background-image:url("media/god_quake5.png");
 }
