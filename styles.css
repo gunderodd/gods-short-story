@@ -301,8 +301,8 @@ background-color: #f8bdc6;
 /* panel 7 */
 
 #panel7 {
+  position: relative;
   padding: 2vw;
-  display: inline-block;
   text-align: center;
   margin: auto;
   }
@@ -312,6 +312,8 @@ background-color: #f8bdc6;
 }
 
 #god-explode {
+  position: absolute;
+  top: 20px;
   background-image: url("media/god_quake4.png");
   background-repeat: no-repeat;
   background-size: contain;
