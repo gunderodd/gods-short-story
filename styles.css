@@ -376,7 +376,7 @@ nav {
   padding: 20px;
   text-align: center;
   margin: auto;
-  background-image: url("media/a_galactic_sunflower.jpg");
+  background-image: url("media/galaxy1.jpg");
   background:radial-gradient(ellipse at center, rgba(255,143,223,0.2) 10%, rgba(255,143,223,0.71) 82%, rgba(36,64,47,1) 100%); /* w3c */
 }
 
@@ -500,7 +500,7 @@ nav {
 }
 
 
-/* panel 10 */
+                                                                  /* panel 10 */
 
 #panel10 {
   padding: 10px;
