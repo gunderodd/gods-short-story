@@ -25,6 +25,7 @@ body {
   --lighterpink: #f8bdc6;
   --purple: #26011C;
   --green: #26402F;
+  --lightgreen: #96FFBB;
 
   --img: position: absolute;
 }
@@ -592,12 +593,70 @@ nav {
   100% {filter: brightness(150%);}
 }
 
-/* panel 12 */
+                                                            /* panel 12 */
 
 #panel12 {
+  background-color: var(--lightgreen);
+  padding: 30px;
 
 }
 
-#txt-howcould {
+#color-block {
+  position: absolute;
+  width: 800px;
+  height: 150px;
+  background-color: var(--green);
+  z-index: 0;
+  transform: skewY(-3deg);
+  left: 34px;
+  opacity: .8;
+}
 
+#measure {
+  height: 400px;
+  width: 400px;
+  left: 42px;
+  bottom: 30px;
+  /* mix-blend-mode: difference; */
+}
+
+#txt-howcould {
+  position: absolute;
+  top: 50px;
+  transform: rotate(2deg);
+  font-size: 35px;
+  color: white;
+  line-height: 30px;
+  background-color: black;
+  word-spacing: 20px;
+
+}
+
+#holder12 {
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  background-color: black;
+  width: 300px;
+}
+
+#txt-wellit {
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  line-height: 40px;
+  padding: 10px;
+  padding-right: 15px;
+  text-align: right;
+
+}
+
+/* panel 13 */
+
+#panel13 {
+
+}
+
+#txt-godwhen {
+  
 }
