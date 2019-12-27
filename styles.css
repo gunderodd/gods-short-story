@@ -1283,4 +1283,5 @@ color: var(--green);
 #panel38-img {
   width: 600px;
   position: absolute;
+  mix-blend-mode: multiply;
 }
