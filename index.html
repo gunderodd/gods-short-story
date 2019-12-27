@@ -5,14 +5,17 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="parallax.min.js"></script>
 
         <meta name="viewport" width="device-width, initial-scale=1.0">
     </head>
 
     <body>
 
-      <nav>
+      <div class="navButton">
+        menu
+      </div>
+
+      <nav id="menu">
         <h1>Panels</h1>
 
           <div class="nav-row">
@@ -82,10 +85,10 @@
         <div class="panel" id="panel2">
           <div id="txt-hemade"><span style="background-color: black;">He made the earth,</span><br><span style="position: absolute; margin-left: 40px; background-color: black;">and He made a sun for it to go around,</span><br><span style="font-size:18px; position: absolute; top: 130px; display: inline-block; background-color: black; transform: rotate(7deg);">and then He <b>kicked</b> the earth and every time the spot He kicked faced the <b>sun</b>...</span></div>
           <img src="media/earth_spin.gif" id="earth-spin"></img>
-          <svg id="txt-arc" viewBox="0 0 200 300">
+          <svg id="txt-arc" viewBox="-90 -20 200 300">
             <path id="curve" d="M 10 10 C 20 20, 40 200, 100 10" fill="transparent"/>
-            <text width="700">
-              <textPath id="txt-hecalled" alignment-baseline="top" xlink:href="#curve">
+            <text width="600">
+              <textPath id="txt-hecalled" xlink:href="#curve">
                  ...He called it another day.
               </textPath>
             </text>
@@ -317,7 +320,7 @@
 
         <div class="panel" id="panel36">
           <div id="txt-hehadntputthis">He hadn’t put this here. Not only was there not meant to be a four leaf clover here, at this time, but there was not meant to be one with this make-up of DNA, anywhere, ever.</div>
-          <img src="media/godwoodcuthead.jpg" id="panel36-img">
+          <img src="media/godwoodcuthead_colorized1.jpg" id="panel36-img">
         </div>
 
         <div class="panel" id="panel37">
@@ -337,5 +340,8 @@
 
       </div>
     </body>
+
+    <script src="parallax.min.js"></script>
+    <script src="menu.js"></script>
 
 </html>
