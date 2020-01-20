@@ -452,7 +452,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #txt-inhis {
-  font-size: 30px;
+  font-size: 35px;
   writing-mode: vertical-lr;
   transform: rotate(-15deg);
   position: absolute;
@@ -461,7 +461,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #txt-andjust {
-  font-size: 30px;
+  font-size: 40px;
   writing-mode: vertical-rl;
   position: absolute;
   bottom: 20px;
@@ -469,6 +469,36 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
   transform: rotate(-20deg);
 
+}
+
+#explode-txt1 {
+  font-size: 20px;
+  display: block;
+}
+
+#explode-txt2 {
+  font-size: 20px;
+  display: none;
+}
+
+#explode-txt3 {
+  font-size: 20px;
+  display: none;
+}
+
+#god-explode:hover #explode-txt1 {
+  display: none;
+}
+
+#god-explode:hover #explode-txt2 {
+  display: block;
+  transform: rotate(20deg);
+}
+
+#god-explode:hover #explode-txt3 {
+  display: block;
+  transform: rotate(-10deg);
+  margin: 20px;
 }
 
 #god-explode {
@@ -502,12 +532,15 @@ h1, h2, h3, h4, h5, h6 {
 #panel8 {
   padding: 30px;
   /* background:radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(135,230,168,1) 100%); */
-  background-color: #96FFBB;
-  /* background-image: url("media/booktexture.jpg");
-  background-size: cover; */
+  
+  background-attachment: fixed;
+  background-image: url("media/booktexture.jpg");
+  background-size: cover;
 }
 
 #booktexture {
+  background-color: #96FFBB;
+  position: absolute;
   width: 100%;
   height: 100%;
   bottom: 0;
@@ -529,6 +562,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #panel9 {
   font-size: 20px;
+  border-bottom: 40px solid black;
 
 }
 
@@ -555,11 +589,16 @@ h1, h2, h3, h4, h5, h6 {
                                                                   /* panel 10 */
 
 #panel10 {
-  padding: 10px;
+  padding: 20px;
+  /* margin: 10px; */
   font-size: 40px;
   border: 20px solid black;
-  background: transparent;
-  background-size: cover;
+  /* background: transparent;
+  background-size: cover;*/
+
+  background-image: url('media/brownpaper.jpg');
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
 }
 
 #txt-andso {
@@ -567,11 +606,9 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(3deg);
   position: absolute;
   top: 50px;
-  background-image: url("media/card14.jpg");
-  background-size: cover;
   color: #96FFBB;
   text-shadow: 2px 2px 5px;
-  /* text-shadow: 0px 0px 5px black; */
+  text-shadow: 0px 0px 5px black;
 }
 
 #zoom1 {
@@ -585,7 +622,7 @@ h1, h2, h3, h4, h5, h6 {
 #zoom2 {
   border: 3px solid black;
   width: 250px;
-  right: 395px;
+  right: 380px;
   bottom: 5px;
   mix-blend-mode: multiply;
 
@@ -594,7 +631,7 @@ h1, h2, h3, h4, h5, h6 {
 #zoom3 {
   border: 4px solid black;
   width: 325px;
-  right: 20px;
+  right: 0;
   bottom: -2px;
   mix-blend-mode: multiply;
 }
@@ -649,26 +686,31 @@ h1, h2, h3, h4, h5, h6 {
 #panel12 {
   background-color: var(--lightgreen);
   padding: 30px;
+  background-image: url("media/brownpaper.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
 
 }
 
 #color-block {
   position: absolute;
-  width: 800px;
+  width: 100%;
   height: 150px;
   background-color: var(--green);
   z-index: 0;
   transform: skewY(-3deg);
-  left: 34px;
-  opacity: .8;
+  left: 0;
+  opacity: .3;
 }
 
 #measure {
-  height: 400px;
+  z-index: 5;
+  height: 510px;
   width: 400px;
-  left: 42px;
-  bottom: 30px;
-  /* mix-blend-mode: difference; */
+  left: 0;
+  bottom: 0;
 }
 
 #txt-howcould {
@@ -678,9 +720,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 35px;
   color: white;
   line-height: 30px;
-  background-color: black;
+  background-color: rgb(0,0,0,.8);
   word-spacing: 20px;
-
+  z-index: 6;
+  text-shadow: 0 0 5px black;
 }
 
 #holder12 {
@@ -698,7 +741,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 40px;
   padding: 10px;
   padding-right: 15px;
+  margin-right: -10px;
   text-align: right;
+  opacity: .9;
+  transform: rotate(1deg);
 
 }
 
@@ -706,20 +752,21 @@ h1, h2, h3, h4, h5, h6 {
 
 #panel13 {
   background-color: black;
-
-
 }
 
 #txt-godwhen {
   font-size: 30px;
   width: 300px;
   color: white;
-  line-height: 55px;
+  line-height: 58px;
+  text-align: center;
+  padding-top: 20px;
+  
 
   animation-name: panel13;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  /* animation-direction:  */
 }
 
 #create13 {
@@ -727,11 +774,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 700px;
   bottom: 0;
   left: 300px;
+  mix-blend-mode: screen;
 }
 
 @keyframes panel13 {
   0% {font-size: 32px;}
-  10% {font-size: 29px;}
+  10% {font-size: 31px;}
 
 }
 
@@ -739,11 +787,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #panel14 {
   padding: 10px;
+  background: rgb(255,255,255);
+  background: linear-gradient(301deg, rgba(255,255,255,1) 0%, rgba(248,189,198,1) 99%, rgba(150,255,187,1) 100%);
 }
 
 #txt-sothiswas {
-  font-size: 80px;
-  line-height: 120px;
+  font-size: 40px;
+  line-height: 140px;
 }
 
 
@@ -751,8 +801,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #panel15 {
   padding: 20px;
-  background-color: var(--green);
+  background: rgb(26,43,32);
+  background: radial-gradient(circle, rgba(26,43,32,1) 0%, rgba(38,64,47,1) 100%, rgba(150,255,187,1) 100%);
   color: white;
+  
 
 }
 
@@ -770,6 +822,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 5;
 }
 
 #eyepluck {
@@ -815,13 +868,19 @@ color: var(--green);
 /* panel 17 */
 
 #panel17 {
-  background-color: var(--green);
+  background: rgb(26,43,32);
+  background: radial-gradient(circle, rgba(26,43,32,1) 0%, rgba(54,89,66,1) 100%);
   padding: 30px;
 }
 
 #txt-notthat {
-  font-size: 40px;
+  font-size: 50px;
   color: white;
+  line-height: 80px;
+  text-align: right;
+  position: absolute;
+  left: 10px;
+  margin: 10px;
 }
 
 #godspeak17 {
@@ -842,12 +901,15 @@ color: var(--green);
 /* panel 18 */
 
 #panel18 {
-  padding: 60px;
+  padding: 20px;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 12%, rgba(38,1,28,1) 61%);
 }
 
 #txt-godcouldnt {
   font-size: 40px;
   line-height: 70px;
+  color: white;
 }
 
 #godinglobe {
@@ -860,21 +922,22 @@ color: var(--green);
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-direction: normal;
+  transition: ease;
 }
 
 @keyframes panel18 {
-  0% {width: 100px; transform: rotate(0deg);}
-  10% {width: 90px; transform: rotate(10deg);}
+  0% {width: 400px; transform: rotate(0deg);}
+  10% {width: 150px; transform: rotate(10deg);}
   20% {width: 80px; transform: rotate(20deg);}
   30% {width: 70px; transform: rotate(30deg);}
   40% {width: 60px; transform: rotate(40deg);}
   50% {width: 50px; transform: rotate(50deg);}
-  60% {width: 40px; transform: rotate(60deg);}
-  70% {width: 30px; transform: rotate(70deg);}
-  80% {width: 20px; transform: rotate(80deg);}
-  90% {width: 10px; transform: rotate(90deg);}
-  100% {width: 0px; transform: rotate(100deg);}
-  110% {width: 500px; transform: rotate(200deg);}
+  60% {width: 40px; transform: rotate(70deg);}
+  70% {width: 30px; transform: rotate(90deg);}
+  80% {width: 20px; transform: rotate(110deg);}
+  90% {width: 10px; transform: rotate(130deg);}
+  100% {width: 0px; transform: rotate(200deg);}
+  110% {width: 500px; transform: rotate(300deg);}
 }
 
 /* panel 19 */
