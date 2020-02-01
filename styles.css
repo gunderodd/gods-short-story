@@ -212,7 +212,6 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("media/background_panel2.png");
   background-size: cover;
   background-repeat: no-repeat;
-
   padding: 10px;
 }
 
@@ -220,7 +219,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   line-height: 40px;
   color: white;
-
 }
 
 #txt-arc {
@@ -231,6 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 
 }
+
 
 #earth-spin {
   position: absolute;
@@ -323,12 +322,30 @@ h1, h2, h3, h4, h5, h6 {
 
 #panel5curve {
   position: absolute;
-  /* top: -100px; */
-  /* color: black; */
+  z-index: 2;
+
 }
 
 #panel5curvetext {
   top: -100px;
+  z-index: 2;
+}
+
+
+#back5 {
+  width: 900px;
+  height: 900px;
+  border-radius: 900px;
+  position: absolute;
+  top: 40px;
+  left: 0px; 
+  border: solid 60px #000;
+  border-color:white transparent transparent transparent;
+  opacity: .6;
+  filter: drop-shadow(-10px -10px 3px white);
+  filter: drop-shadow(10px 10px 2px white);
+  z-index: 0;
+  mix-blend-mode: overlay;
 }
 
                                                                     /* panel 6 */
@@ -1098,7 +1115,7 @@ color: black;
 
 @keyframes words {
   0% {mix-blend-mode: difference;}
-  10% {mix-blend-mode: normal;}
+  10% {mix-blend-mode: hue;}
   80% {mix-blend-mode: difference;}
   90% {mix-blend-mode: hue;}
 }
@@ -1113,30 +1130,54 @@ color: black;
 /* panel 20 */
 
 #panel20 {
-  padding: 20px;
+  /* padding: 20px; */
+  box-shadow: inset 0 0 20px 5px #000000; 
+
 }
 
 #txt-itturned {
-  font-size: 30px;
+  font-size: 60px;
+  position: absolute;
+  z-index: 3;
+  padding: 20px;
+  color: black;
+  margin: 10px;
+  text-align: center;
+  text-shadow: 0 0 1px black;
 }
 
 #panel20-img {
-  border: 1px solid black;
-  width: 600px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   position: absolute;
+  bottom: 0;
+  z-index: 2;
+  left: -20px;
+  mix-blend-mode: overlay;
 }
 
 /* panel 21 */
 
 #panel21 {
-  /* padding: 30px; */
+  background-color: white;
 }
 
 #txt-godstood {
-  font-size: 50px;
+  font-size: 35px;
   position: absolute;
   top: 0;
+  z-index: 3;
+  margin: 10px;
+
+}
+
+#txt-biggerthanthe {
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 150px;
+  bottom: 5px;
+  right: -10px;
 }
 
 #panel21-img {
@@ -1144,8 +1185,19 @@ color: black;
   height: 100%;
   position: absolute;
   top: 0;
-  /* mix-blend-mode: multiply; */
+  left: 160px;
+  filter: hue-rotate(190deg);
 
+  animation-name: panel21;
+  animation-duration: .1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes panel21 {
+  from { height: 100%; }
+  to { height: 100.05%; }
 }
 
 /* panel 22 */
@@ -1306,6 +1358,8 @@ color: black;
   color: black;
   padding: 2px;
   z-index: 2;
+  text-align: center;
+  text-shadow: 0 0 1px black;
 }
 
 /* panel 28 */
