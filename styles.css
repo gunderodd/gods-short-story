@@ -1186,7 +1186,7 @@ color: black;
   position: absolute;
   top: 0;
   left: 160px;
-  filter: hue-rotate(190deg);
+  filter: hue-rotate(190deg) grayscale(50%);
 
   animation-name: panel21;
   animation-duration: .1s;
@@ -1796,4 +1796,5 @@ color: black;
   /* position: absolute; */
   float: left;
   mix-blend-mode: multiply;
+  box-shadow: 0 0 10px black;
 }
