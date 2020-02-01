@@ -623,6 +623,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   right: 0;
   mix-blend-mode: multiply;
+  filter: grayscale(50%);
 }
 
 #txt-theearth {
@@ -672,7 +673,7 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   font-size: 40px;
   border: 20px solid black;
   background-color: var(--lighterpink);
-  background-image: url('media/brownpaper.jpg');
+  background-image: url("media/booktexture.jpg");
   background-attachment: fixed;
   background-blend-mode: overlay;
   box-shadow: inset 0 0 20px 5px #000000;
@@ -764,11 +765,13 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
 #panel12 {
   background-color: var(--lightgreen);
   padding: 30px;
-  background-image: url("media/brownpaper.jpg");
+  background-image: url("media/background_panel2.png");
   background-attachment: fixed;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: repeat;
   background-blend-mode: darken;
+  filter: grayscale(50%);
   box-shadow: inset 0 0 20px 5px #000000;
 
 }
@@ -782,6 +785,7 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   transform: skewY(-3deg);
   left: 0;
   opacity: .3;
+  box-shadow: 0 0 10px black;
 }
 
 #measure {
@@ -790,6 +794,16 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   width: 400px;
   left: 0;
   bottom: 0;
+  box-shadow: 0 0 10px black;
+
+  animation-name: animation12;
+  animation-iteration-count: infinite;
+  animation-duration: .1s;
+}
+
+@keyframes animation12 {
+  from { height: 510px; }
+  to { height: 511px; }
 }
 
 #txt-howcould {
@@ -811,6 +825,7 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   right: 80px;
   background-color: black;
   width: 300px;
+  box-shadow: 0 0 10px black;
 }
 
 #txt-wellit {
@@ -824,6 +839,7 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   text-align: right;
   opacity: .9;
   transform: rotate(1deg);
+  box-shadow: 0 0 10px black;
 
 }
 
@@ -831,21 +847,30 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
 
 #panel13 {
   background-color: black;
+
 }
 
 #txt-godwhen {
   font-size: 30px;
   width: 300px;
+  height: 100%;
   color: white;
   line-height: 58px;
-  text-align: center;
+  text-align: left;
   padding-top: 20px;
+  margin-left: 40px;
+  
   
 
   animation-name: panel13;
-  animation-duration: 2s;
+  animation-duration: .2s;
   animation-iteration-count: infinite;
-  /* animation-direction:  */
+}
+
+@keyframes panel13 {
+  from {font-size: 30px;}
+  to {font-size: 30.3px;}
+
 }
 
 #create13 {
@@ -854,13 +879,21 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   bottom: 0;
   left: 300px;
   mix-blend-mode: screen;
+  box-shadow: inset 0 0 20px 5px #000000;
 }
 
-@keyframes panel13 {
-  0% {font-size: 32px;}
-  10% {font-size: 31px;}
+#book13 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  mix-blend-mode: hard-light;
+  filter: hue-rotate(300deg) grayscale(50%);
+  z-index: 5;
 
 }
+
 
 /* panel 14 */
 
@@ -1092,40 +1125,55 @@ color: black;
 }
 
 #txt-itsnot {
-  font-size: 120px;
+  font-size: 80px;
   color: white;
-  margin-left: 20px;
+  margin: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
 
 }
 
 #panel19-img {
-  height: 100%;
-  border: 4px solid black;
+  height: 70%;
   bottom: 0;
   right: 0;
   position: absolute;
-  mix-blend-mode: hue;
 
   animation-name: words;
-  animation-duration: 4s;
+  animation-duration: .1s;
   animation-direction: normal;
   animation-iteration-count: infinite;
-
 }
 
 @keyframes words {
-  0% {mix-blend-mode: difference;}
-  10% {mix-blend-mode: hue;}
-  80% {mix-blend-mode: difference;}
-  90% {mix-blend-mode: hue;}
+  from { height: 70%; }
+  to { height: 70.2%; }
 }
 
+
+
 #clover19 {
-  width: 200px;
+  width: 150px;
   z-index: 5;
-  top: 155px;
-  right: -60px;
+  top: 278px;
+  right: 85px;
 }
+
+#book19 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  mix-blend-mode: lighten;
+  filter: brightness(40%) grayscale(50%);
+
+
+}
+
+
 
 /* panel 20 */
 
@@ -1139,11 +1187,13 @@ color: black;
   font-size: 60px;
   position: absolute;
   z-index: 3;
-  padding: 20px;
+  padding: 0;
   color: black;
   margin: 10px;
   text-align: center;
   text-shadow: 0 0 1px black;
+  /* background-color: white;
+  opacity: .9; */
 }
 
 #panel20-img {
@@ -1154,6 +1204,7 @@ color: black;
   z-index: 2;
   left: -20px;
   mix-blend-mode: overlay;
+  filter: brightness(200%);
 }
 
 /* panel 21 */
@@ -1664,7 +1715,7 @@ color: black;
 #panel35 {
   padding: 30px;
   background-color: var(--green);
-  background-image: url('media/skin.jpg');
+  background-image: url("media/booktexture.jpg");
   background-size: contain;
   background-attachment: fixed;
   background-blend-mode: multiply;
