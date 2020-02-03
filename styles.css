@@ -1543,7 +1543,6 @@ color: black;
   height: 2000px;
   z-index: 1;
   right: 46%;
-  /* bottom: 50px; */
   transform: skewY(100deg);
   mix-blend-mode: luminosity;
 
