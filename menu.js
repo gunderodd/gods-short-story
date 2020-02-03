@@ -32,11 +32,3 @@ for (i=0; i < links.length; i++) {
         }
     })
 }
-
-// how to use forEach instead?
-
-// links.forEach(link => {
-//     link.addEventListener("click", function() {
-//         menu.style.display === "block"
-//     })
-// })
