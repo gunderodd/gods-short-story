@@ -1,11 +1,11 @@
 const images = document.querySelectorAll("[srcset]")
 
 function preloadImage(img) {
-    const src = img.getAttribute("srcset")
+    const srcset = img.getAttribute("srcset")
     if (!src) {
         return
     } else {
-        img.srcset = src
+        img.srcset = srcset
     }
 
 }
