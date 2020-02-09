@@ -215,6 +215,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
 }
 
+.no-webp #panel2 {
+  background-image: url("fallback_media/background_panel2.png");
+}
+
 #txt-hemade {
   font-size: 30px;
   line-height: 40px;
