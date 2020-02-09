@@ -74,23 +74,27 @@
 
       <div class="page-wrap">
 
-       <!-- example 
-        <source srcset="media/buffalo_man_1.webp" type="image/webp" class="buffalo_man" id="buffalo_1"> -->
-
-
         <div class="panel" id="panel1">
           <picture>
             <source srcset="webp_media/splash.webp" type="image/webp">
             <source srcset="fallback_media/splash.png"  type="image/webp">
-            <img data-src="fallback_media/splash.png" alt="decorative splash of color" id="splash1" />
+            <img data-src="fallback_media/splash.png" alt="decorative splash of color" id="splash1">
           </picture>
           <div class="txt" id="txt-inthe">In the <span style="font-size: 90px; margin-left: 10px;">beginning</span>, <br> <span style="display: inline-block; transform: skewY(0deg);"><em>God</em></span><br> &nbsp;&nbsp;created<br> &nbsp;&nbsp;&nbsp;the <b>Heavens</b><br><span style="font-size:3vw">and the</span><br><em><b>&nbsp;&nbsp;Earth</b></em>.</div>
-          <img alt="a god that looks like cyclops holding the earth" id="god1" data-src="webp_media/god1_trans.webp"></img>
+          <picture>
+            <source srcset="webp_media/god1_trans.webp" type="image/webp">
+            <source srcset="fallback_media/god1_trans.png" type="image/webp">
+            <img data-src="fallback_media/god1_trans.png" alt="a god that looks like cyclops holding the earth" id="god1">
+          </picture>
         </div>
 
         <div class="panel" id="panel2">
           <div id="txt-hemade"><span style="background-color: black;">He made the earth,</span><br><span style="position: absolute; margin-left: 40px; background-color: black;">and He made a sun for it to go around,</span><br><span style="font-size:18px; position: absolute; top: 130px; display: inline-block; background-color: black; transform: rotate(7deg);">and then He <b>kicked</b> the earth and every time the spot He kicked faced the <b>sun</b>...</span></div>
-          <img alt="an animation of the earth spinning with a footprint the size of a continent" data-src="webp_media/earth_spin.webp" id="earth-spin"></img>
+          <picture>
+            <source srcset="webp_media/earth_spin.webp" type="image/webp">
+            <source srcset="fallback_media/earth-spin.gif" type="image/webp">
+            <img data-src="fallback_media/earth-spin.gif" alt="an animation of the earth spinning with a footprint the size of a continent" id="earth-spin">
+          </picture>          
           <svg id="txt-arc" viewBox="-90 -20 200 300">
             <path id="curve" d="M 10 10 C 20 20, 40 200, 100 10" fill="transparent"/>
             <text width="600">
@@ -386,7 +390,7 @@
     </body>
 
     <script src="menu.js"></script>
-    <script src="lazy.js"></script>
+    <!-- <script src="lazy.js"></script> -->
     <script src="modernizr-custom.js"></script>
 
 </html>
