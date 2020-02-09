@@ -294,6 +294,10 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+.no-webp #panel5 {
+  background-image: url("fallback_media/galaxy1.jpg");
+}
+
 #txt-thenon {
   font-size: 40px;
   position: absolute;
@@ -482,6 +486,10 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+.no-webp #panel7 {
+  background-image: url("fallback_media/galaxy1.jpg");
+}
+
 #galaxy7 {
   bottom: 0;
   left: 0;
@@ -578,6 +586,10 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.no-webp #god-explode {
+  background-image: url("fallback_media/god_quake4.png");
+}
+
 #god-explode:hover {
   left: 150px;
   top: 50px;
@@ -586,6 +598,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 550px;
   height: 550px;
   background-image:url("webp_media/god_quake5.webp");
+}
+
+.no-webp #god-explode:hover {
+  background-image: url("fallback_media/god_quake5.png");
 }
 
 #shading7-a {
@@ -618,6 +634,10 @@ h1, h2, h3, h4, h5, h6 {
   filter: brightness(150%);
   background-size: cover;
   box-shadow: inset 0 0 20px 5px #000000;
+}
+
+.no-webp #panel8 {
+  background-image: url("fallback_media/booktexture.jpg");
 }
 
 #booktexture {
@@ -683,6 +703,10 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   background-blend-mode: overlay;
   box-shadow: inset 0 0 20px 5px #000000;
 
+}
+
+.no-webp #panel10 {
+  background-image: url("fallback_media/booktexture.jpg");
 }
 
 #txt-andso {
@@ -779,6 +803,10 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   filter: grayscale(50%);
   box-shadow: inset 0 0 20px 5px #000000;
 
+}
+
+.no-webp #panel12 {
+  background-image: url("fallback_media/background_panel2.png");
 }
 
 #color-block {
@@ -962,6 +990,10 @@ background: linear-gradient(177deg, rgba(54,137,62,1) 20%, rgba(248,189,198,1) 9
   mix-blend-mode: darken;
   box-shadow: inset 0 0 20px 5px #000000; 
 
+}
+
+.no-webp #panel16 {
+  background-image: url("fallback_media/mauromap.jpg");
 }
 
 #txt-itis16 {
@@ -1353,6 +1385,10 @@ color: black;
 
 }
 
+.no-webp #panel26 {
+  background-image: url("fallback_media/god_landing.jpg");
+}
+
 #txt-forthesake {
   font-size: 40px;
   margin: 10px;
@@ -1732,6 +1768,10 @@ color: black;
   box-shadow: inset 0 0 20px 5px #000000;
 }
 
+.no-webp #panel35 {
+  background-image: url("fallback_media/booktexture.jpg");
+}
+
 #txt-buthehadnt {
   font-size: 50px;
   color: white;
@@ -1846,6 +1886,10 @@ color: black;
   background-image: url('webp_media/skin.webp');
   background-size: contain;
   background-blend-mode: overlay;
+}
+
+.no-webp #panel38 {
+  background-image: url("fallback_media/skin.jpg");
 }
 
 #txt-godthrewhishood {
