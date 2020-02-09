@@ -5,7 +5,7 @@ function preloadImage(img) {
     if (!src) {
         return
     } else {
-        img.src = src
+        img.srcset = src
     }
 
 }
