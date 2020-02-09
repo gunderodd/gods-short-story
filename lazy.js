@@ -1,4 +1,4 @@
-const images = document.querySelectorAll("[srcset]")
+const images = document.querySelectorAll("picture")
 
 function preloadImage(img) {
     const srcset = img.getAttribute("srcset")
@@ -6,7 +6,6 @@ function preloadImage(img) {
         return
     } else {
         img.srcset = srcset
-        console.log('working')
     }
 
 }
@@ -29,6 +28,8 @@ const imageObserver = new IntersectionObserver((entries, imageObserver) => {
 
 images.forEach(image => {
     imageObserver.observe(image)
+    console.log(image)
+    console.count(image)
 })
 
 // testing with different selectors
