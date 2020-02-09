@@ -1,4 +1,5 @@
 const images = document.querySelectorAll("[data-src]")
+const pictures = document.querySelectorAll("picture")
 
 function preloadImage(img) {
     const src = img.getAttribute("data-src")
@@ -28,4 +29,8 @@ const imageObserver = new IntersectionObserver((entries, imageObserver) => {
 
 images.forEach(image => {
     imageObserver.observe(image)
+})
+
+pictures.forEach(picture => {
+    console.log(picture)
 })

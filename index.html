@@ -74,10 +74,16 @@
 
       <div class="page-wrap">
 
+       <!-- example 
+        <source srcset="media/buffalo_man_1.webp" type="image/webp" class="buffalo_man" id="buffalo_1"> -->
 
 
         <div class="panel" id="panel1">
-          <img alt="decorative splash of color" id="splash1" data-src="webp_media/splash.webp"></img>
+          <picture>
+            <source srcset="webp_media/splash.webp" type="image/webp">
+            <source srcset="fallback_media/splash.png"  type="image/webp">
+            <img data-src="fallback_media/splash.png" alt="decorative splash of color" id="splash1" />
+          </picture>
           <div class="txt" id="txt-inthe">In the <span style="font-size: 90px; margin-left: 10px;">beginning</span>, <br> <span style="display: inline-block; transform: skewY(0deg);"><em>God</em></span><br> &nbsp;&nbsp;created<br> &nbsp;&nbsp;&nbsp;the <b>Heavens</b><br><span style="font-size:3vw">and the</span><br><em><b>&nbsp;&nbsp;Earth</b></em>.</div>
           <img alt="a god that looks like cyclops holding the earth" id="god1" data-src="webp_media/god1_trans.webp"></img>
         </div>
@@ -374,9 +380,13 @@
 
 
       </div>
+      <!-- <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+    //]]></script> -->
     </body>
 
     <script src="menu.js"></script>
     <script src="lazy.js"></script>
+    <script src="modernizr-custom.js"></script>
 
 </html>
