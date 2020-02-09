@@ -2,7 +2,7 @@ const images = document.querySelectorAll("[srcset]")
 
 function preloadImage(img) {
     const srcset = img.getAttribute("srcset")
-    if (!src) {
+    if (!srcset) {
         return
     } else {
         img.srcset = srcset
