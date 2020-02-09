@@ -6,6 +6,7 @@ function preloadImage(img) {
         return
     } else {
         img.srcset = srcset
+        console.log('working')
     }
 
 }
@@ -31,8 +32,8 @@ images.forEach(image => {
 })
 
 // testing with different selectors
-const pictures = document.querySelectorAll("picture")
+// const pictures = document.querySelectorAll("picture")
 
-pictures.forEach(picture => {
-    console.log(picture)
-})
+// pictures.forEach(picture => {
+//     console.log(picture)
+// })
