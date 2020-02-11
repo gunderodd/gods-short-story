@@ -153,6 +153,37 @@ h1, h2, h3, h4, h5, h6 {
 
                         /* specific panels, including their ids with words, illustrations, and decorations */
 
+                                                      /* title panel */
+
+#title-panel {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+}
+
+#title-panel h1 {
+  font-size: 300px;
+}
+
+#title-panel h2 {
+  display: inline-block;
+  font-style: italic;
+  font-size: 25px;
+}
+
+#title-panel h3 {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  margin-top: 80px;
+  padding: 5px;
+  transform: rotate(-3deg);
+}
+
+
                                                             /* panel 1 */
 
 #panel1 {
